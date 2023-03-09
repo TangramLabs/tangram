@@ -1,0 +1,7 @@
+.github/
+.git/
+.vscode/
+docs/
+proto/
+tools/
+build/
