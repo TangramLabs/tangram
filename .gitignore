@@ -1,5 +1,6 @@
 build/
 release/
+dist/
 .idea/
 .vscode/
 .DS_Store
