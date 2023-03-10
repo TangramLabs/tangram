@@ -63,22 +63,6 @@ builds:
       - -tags=cgo
     ldflags:
       - -s -w -X github.com/cosmos/cosmos-sdk/version.Name=tangram -X github.com/cosmos/cosmos-sdk/version.AppName=tangramd -X github.com/cosmos/cosmos-sdk/version.Version={{.Version}} -X github.com/cosmos/cosmos-sdk/version.Commit={{.Commit}}
-  - id: "tangramd-windows"
-    main: ./cmd/tangramd
-    binary: bin/tangramd
-    env:
-      - CGO_ENABLED=1
-      - CC=x86_64-w64-mingw32-gcc
-      - CXX=x86_64-w64-mingw32-g++
-    goos:
-      - windows
-    goarch:
-      - amd64
-    flags:
-      - -tags=cgo
-      - -buildmode=exe
-    ldflags:
-      - -s -w -X github.com/cosmos/cosmos-sdk/version.Name=tangram -X github.com/cosmos/cosmos-sdk/version.AppName=tangramd -X github.com/cosmos/cosmos-sdk/version.Version={{.Version}} -X github.com/cosmos/cosmos-sdk/version.Commit={{.Commit}}
 
 archives:
   - name_template: >-
@@ -92,7 +76,6 @@ archives:
     builds:
       - tangramd-darwin
       - tangramd-darwin-arm64
-      - tangramd-windows
       - tangramd-linux
       - tangramd-linux-arm64
 
